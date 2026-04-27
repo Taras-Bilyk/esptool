@@ -1,6 +1,6 @@
 # ESPTOOL (for ESP32 WROOM)
 
-<img src="screenshots/scr_1.jpg" width="400">
+<img src="screenshots/scr_1.png" width="400">
 
 ## 🤨 Навіщо ?:
 для тих хто починає вчити micropython і не хоче одразу заглиблюватись в нюанси заліза
