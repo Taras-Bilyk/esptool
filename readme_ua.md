@@ -1,4 +1,5 @@
 # ESPTOOL (for ESP32 WROOM)
+> [англійська версія рідмі (english version of readme)](README.md)
 
 <img src="screenshots/scr_1.png" width="400">
 
