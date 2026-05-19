@@ -1,32 +1,33 @@
 # ESPTOOL (for ESP32 WROOM)
+> [українська версія рідмі (ukrainian version of readme)](readme_ua.md)
 
 <img src="screenshots/scr_1.png" width="400">
 
-## 🤨 Навіщо ?:
-для тих хто починає вчити micropython і не хоче одразу заглиблюватись в нюанси заліза
+## 🤨 Why though ?:
+for people who are just starting to learn micropython and don't wanna instantly dive into hardware insanity
 
-## 🤓 Опис:
-GUI утиліта для читання і запису файлів із пк на контролер ESP32. також тут доступна функція автопрошивки плати для роботи саме із micropython.
+## 🤓 Description:
+GUI utility for reading and writing files from PC to an ESP32 controller. also includes an auto-flashing feature specifically for micropython stuff.
 
-## ☠️ Використані технології:
-- все написано на PYTHON
-- GUI на KIVY
-- під капотом працює на AMPY
+## ☠️ Technologies used:
+- everything is written in PYTHON
+- GUI built with KIVY
+- under the hood it runs on AMPY
 
-## 🌱 Структура проекта:
-- `firmware/` — тут лежить прошивка для ESP32
-- `esp_filesystem.py` - модуль для читання і запису файлової системи всередиині ESP32
-- `filechooser.py` — модуль для роботи нативного GUI меню з вибором папки на пк
-- `firmware_downloader.py` — модуль для прошивки ESP32
-- `main.py` — головний файл для запуска
+## 🌱 Project structure:
+- `firmware/` — firmware for ESP32 lives here
+- `esp_filesystem.py` - module for reading and writing the filesystem inside ESP32
+- `filechooser.py` — module for working with the native GUI folder picker on PC
+- `firmware_downloader.py` — ESP32 flashing module
+- `main.py` — main startup file
 
-## ⚠️ ПОПЕРЕДЖЕННЯ:
-- цей код працює ЛИШЕ на DEBIAN / UBUNTU машинах !
-- прошивка працює ЛИШЕ для ESP32 WROOM !
-- утиліта шукає ESP32 ЛИШЕ на ttyUSB0 !
+## ⚠️ WARNING:
+- this code works ONLY on DEBIAN / UBUNTU machines !
+- firmware works ONLY for ESP32 WROOM !
+- utility searches for ESP32 ONLY on ttyUSB0 !
 
-## 😎 Як це запустити ?:
-1. встановлюємо необхідні пакети
+## 😎 How to run this thing ?:
+1. install required packages
 ```bash
 sudo apt update
 sudo apt install python3
@@ -34,18 +35,16 @@ sudo apt install python3-pip python3-dev libsdl2-dev libsdl2-image-dev libsdl2-m
 pip install "kivy[base]"
 pip install adafruit-ampy
 ```
-2. запускаємо утиліту
+2. launch the utility
 ```bash
 python3 main.py
 ```
 
-## ✨ А ось так ESPTOOL виглядає в реальному житті
+## ✨ And this is how ESPTOOL actually looks in real life
 <img src="screenshots/scr_2.jpg" width="400">
 
-## ❓ Швидкі питання і відповіді
-1. "яка там прошивка використовується ?" - "офіційна прошивка 2025 року із офіційного сайта micropython. прошивка НЕ модифікована"
-2. "чи це безпечно ?" - "так, ця утиліта це протсто графіцна надбудова над стандартнимми інструментами для роботи із ESP32. утиліта не має жодного кешування чи збереження даних користувача"
-3. "чому колии відкритий ESPTOOL то я не можу запускати на виконання код на ESP32 ?" - "бо платта ESP32 занята постійним опитуванням файлів, потрібно вимкнути утиліту для того щоб вона не заважала виконанню кода через опитування"
-4. "чого запск утиліти виглядає як запуск ядерного реактора ?" - "бо це KIVY. да, він дуже важкий по ресурсах для компютера, але головне що інтерфейс гарний _)"
-
-
+## ❓ Quick questions and answers
+1. "what firmware does this thing use ?" - "official 2025 firmware from the official micropython website. firmware is NOT modified"
+2. "is this safe ?" - "yeah, this utility is basically just a graphical wrapper around standard ESP32 tools. utility does NOT do any caching or user data storage"
+3. "why can't i run code on ESP32 while ESPTOOL is open ?" - "because the ESP32 board is busy with constant file polling. you need to close the utility so it stops interfering with code execution"
+4. "why does launching this utility look like starting a nuclear reactor ?" - "because it's KIVY. yeah, it's ridiculously heavy on PC resources, but hey at least the interface looks nice _)"
